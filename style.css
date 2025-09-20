@@ -1,0 +1,485 @@
+/* Horizontal projects box styles */
+...existing code...
+body {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ff2a2a 0%, #b30000 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #22223b 0%, #125902 100%);
+    color: #fff;
+    padding: 2.5rem 0 2rem 0;
+    border-bottom: 4px solid #ff00ff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #ff00ff;
+    box-shadow: 0 8px 32px rgba(255,0,255,0.15);
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.profile-pic:hover {
+    transform: scale(1.07) rotate(-3deg);
+}
+h1 {
+    font-size: 3rem;
+    margin: 0 0 0.7rem 0;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff00ff, #00ffee, #33ff00, #ffee00, #ff9900, #ff0000, #00f6ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    text-shadow: 0 2px 12px #22223b;
+}
+.bio {
+    font-size: 1.2rem;
+    color: #ffee00;
+    margin: 0;
+    font-style: italic;
+    text-shadow: 0 1px 8px #22223b;
+}
+.header-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-left: 2rem;
+}
+.header-links a {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.linkedin-link {
+    background: linear-gradient(90deg, #0A66C2 60%, #00ffee 100%);
+    color: #fff;
+}
+.linkedin-link:hover {
+    background: #005983;
+}
+.github-link {
+    background: linear-gradient(90deg, #222 60%, #ff00ff 100%);
+    color: #fff;
+}
+.github-link:hover {
+    background: #444;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 2.5rem 1.5rem;
+    background: #22223b;
+    border-radius: 32px;
+    box-shadow: 0 8px 48px rgba(0,64,255,0.10);
+    border: 2px solid #ff00ff;
+    backdrop-filter: blur(8px);
+}
+
+.box-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    margin: 2.5rem auto;
+    max-width: 1200px;
+    background: rgba(255,255,255,0.10);
+    border-radius: 32px;
+    box-shadow: 0 8px 48px rgba(0,64,255,0.10);
+    backdrop-filter: blur(6px);
+}
+
+.box {
+    flex: 1 1 320px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    padding: 2.2rem 1.7rem;
+    margin: 0.5rem 0;
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    min-width: 320px;
+    max-width: 370px;
+    position: relative;
+    border: 2px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(6px);
+}
+
+
+/* Unique accent for each box */
+.skills-section {
+    border-left: 8px solid #00c896;
+    box-shadow: 0 2px 24px #00c89633;
+}
+.experience-section {
+    border-left: 8px solid #a700ff;
+    box-shadow: 0 2px 24px #a700ff33;
+}
+.projects-section {
+    border-left: 8px solid #ffd600;
+    box-shadow: 0 2px 24px #ffd60033;
+}
+.achievements-section {
+    border-left: 8px solid #00baff;
+    box-shadow: 0 2px 24px #00baff33;
+}
+.hobbies-section {
+    border-left: 8px solid #ff005c;
+    box-shadow: 0 2px 24px #ff005c33;
+}
+
+/* Horizontal projects box styles - glass cards */
+.horizontal-projects .projects-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+.horizontal-projects .project-card {
+    background: rgba(255,255,255,0.45);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    padding: 1.5rem 1.2rem;
+    min-width: 260px;
+    max-width: 280px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    border: 2px solid #ffd60044;
+    backdrop-filter: blur(4px);
+}
+.horizontal-projects .project-card:hover {
+    transform: scale(1.07) translateY(-6px);
+    box-shadow: 0 12px 32px #ffd60044;
+    border: 2px solid #ffd600;
+}
+.horizontal-projects .project-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    font-size: 1.18rem;
+    color: #a700ff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.horizontal-projects .project-card p {
+    margin: 0;
+    font-size: 1.02rem;
+    color: #22223b;
+    font-weight: 500;
+}
+
+.footer-content {
+    text-align: center;
+    padding: 1.2rem 0;
+    color: #fff;
+    font-size: 1.1rem;
+    background: rgba(34,34,59,0.85);
+    border-top: 3px solid #ff00ff;
+    box-shadow: 0 -2px 16px #ff00ff22;
+    border-radius: 0 0 24px 24px;
+}
+/* Horizontal projects box styles */
+.horizontal-projects .projects-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+.horizontal-projects .project-card {
+    background: #f7f7ff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding: 1.2rem 1rem;
+    min-width: 240px;
+    max-width: 260px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.horizontal-projects .project-card:hover {
+    transform: scale(1.04) translateY(-4px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.16);
+}
+.horizontal-projects .project-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+    color: #a700ff;
+}
+.horizontal-projects .project-card p {
+    margin: 0;
+    font-size: 0.98rem;
+    color: #22223b;
+}
+/* CSS for a personal portfolio webpage */
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #00330d 0%, #0040ff 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #22223b 0%, #125902 100%);
+    color: #fff;
+    padding: 2.5rem 0 2rem 0;
+    border-bottom: 4px solid #ff00ff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #ff00ff;
+    box-shadow: 0 8px 32px rgba(255,0,255,0.15);
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.profile-pic:hover {
+    transform: scale(1.07) rotate(-3deg);
+}
+h1 {
+    font-size: 3rem;
+    margin: 0 0 0.7rem 0;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff00ff, #00ffee, #33ff00, #ffee00, #ff9900, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    text-shadow: 0 2px 12px #22223b;
+}
+.bio {
+    font-size: 1.2rem;
+    color: #ffee00;
+    margin: 0;
+    font-style: italic;
+    text-shadow: 0 1px 8px #22223b;
+}
+/* Box container for sections */
+.box-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2.5rem auto;
+    max-width: 1200px;
+}
+
+/* Base box style */
+.box {
+    flex: 1 1 320px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+    padding: 2rem 1.5rem;
+    margin: 0.5rem 0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 320px;
+    max-width: 370px;
+    position: relative;
+}
+.box:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+}
+
+/* Unique styles for each box */
+.skills-section {
+    background: linear-gradient(135deg, #e0ffef 0%, #b2f7ef 100%);
+    border-left: 8px solid #00c896;
+}
+.experience-section {
+    background: linear-gradient(135deg, #f7e0ff 0%, #e0b2f7 100%);
+    border-left: 8px solid #a700ff;
+}
+.projects-section {
+    background: linear-gradient(135deg, #fffbe0 0%, #f7eeb2 100%);
+    border-left: 8px solid #ffd600;
+}
+.achievements-section {
+    background: linear-gradient(135deg, #e0f7ff 0%, #b2e7f7 100%);
+    border-left: 8px solid #00baff;
+}
+.hobbies-section {
+    background: linear-gradient(135deg, #ffe0e0 0%, #f7b2b2 100%);
+    border-left: 8px solid #ff005c;
+}
+    align-items: center;
+}
+.header-links a {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.linkedin-link {
+    background: linear-gradient(90deg, #0A66C2 60%, #00ffee 100%);
+    color: #fff;
+}
+.linkedin-link:hover {
+    background: #005983;
+}
+.github-link {
+    background: linear-gradient(90deg, #222 60%, #ff00ff 100%);
+    color: #fff;
+}
+.github-link:hover {
+    background: #444;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    background: rgba(0,64,255,0.85);
+    border-radius: 24px;
+    box-shadow: 0 4px 32px rgba(78,168,222,0.15);
+    border: 2px solid #ff00ff;
+}
+.skills-hobbies {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+.skills, .hobbies {
+    flex: 1;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    border: 2px solid #ffee00;
+    box-shadow: 0 4px 16px rgba(255,0,255,0.08);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(2px);
+    transition: box-shadow 0.2s;
+}
+.skills:hover, .hobbies:hover {
+    box-shadow: 0 8px 32px #ff00ff44;
+}
+.skills {
+    background: linear-gradient(135deg, #ff00ff 0%, #ffee00 100%);
+}
+.hobbies {
+    background: linear-gradient(135deg, #00b300 0%, #00ffee 100%);
+}
+.skills h2, .hobbies h2 {
+    color: #fff;
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 8px #22223b;
+}
+.skills ul, .hobbies ul {
+    padding-left: 1.2rem;
+    font-size: 1.1rem;
+    color: #22223b;
+}
+.skills ul li, .hobbies ul li {
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+}
+
+.contact-section {
+    margin-top: 2.5rem;
+    background: linear-gradient(90deg, #ff0000 0%, #ffee00 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 2px solid #22223b;
+    box-shadow: 0 4px 16px #ff00ff33;
+}
+.contact-section h2 {
+    color: #22223b;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 1px 8px #ffee00;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 400px;
+}
+.contact-form label {
+    font-weight: 700;
+    color: #ff00ff;
+    font-size: 1.1rem;
+}
+.contact-form input {
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ffee00;
+    font-size: 1.05rem;
+    background: #fff8;
+    color: #22223b;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: linear-gradient(90deg, #22223b 0%, #ff00ff 100%);
+    color: #fff;
+    margin-top: 2.5rem;
+    border-radius: 0 0 24px 24px;
+    font-size: 1.1rem;
+    box-shadow: 0 -2px 16px #ff00ff33;
+}
+.footer-content p {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+    .header-content, .skills-hobbies {
+        flex-direction: column;
+        align-items: center;
+    }
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .skills, .hobbies {
+        padding: 1.2rem;
+    }
+}
